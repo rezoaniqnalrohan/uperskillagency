@@ -1,0 +1,351 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --color-wp-mark: var(--wp-mark);
+  --color-wp-line: var(--wp-line);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-hero-muted: var(--hero-muted);
+  --color-hero-surface: var(--hero-surface);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-strong: var(--brand-strong);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", "Noto Serif Bengali", ui-serif, Georgia, serif;
+  --font-shiri: "Hind Siliguri", "Inter", sans-serif;
+  --font-mono: "Inter", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  /* WordPress page palette */
+  --wp-mark: oklch(0.52 0.09 235);          /* WP blue #21759B */
+  --wp-line: oklch(0.86 0.02 235);
+  --wp-surface: oklch(0.97 0.012 235);
+  --wp-rail-bg: oklch(0.95 0.016 235);
+  /* Uperskill brand — soft, generous radius (r-xl = 20px baseline) */
+  --radius: 1rem;
+  /* Light (default) — warm neutral surface + brand blue accent */
+  --background: oklch(0.98 0.005 85);       /* Neutral 50  #FAF9F6 */
+  --foreground: oklch(0.19 0.004 55);       /* Neutral 900 #1A1816 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.19 0.004 55);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.19 0.004 55);
+  --primary: oklch(0.47 0.176 268);         /* Brand Blue 500 #3955C0 */
+  --primary-foreground: oklch(0.99 0.003 85);
+  --secondary: oklch(0.95 0.009 85);        /* Neutral 100 #F3F0EA */
+  --secondary-foreground: oklch(0.19 0.004 55);
+  --muted: oklch(0.95 0.009 85);
+  --muted-foreground: oklch(0.42 0.01 65);  /* between Neutral 600/700 */
+  --accent: oklch(0.47 0.176 268);          /* Brand Blue as accent */
+  --accent-foreground: oklch(0.99 0.003 85);
+  --destructive: oklch(0.48 0.16 25);       /* Error text #791F1F */
+  --destructive-foreground: oklch(0.99 0.003 85);
+  --border: oklch(0.89 0.013 85);           /* Neutral 200 #E5E0D5 */
+  --input: oklch(0.89 0.013 85);
+  --ring: oklch(0.47 0.176 268);
+  /* Brand tokens */
+  --brand: oklch(0.47 0.176 268);
+  --brand-foreground: oklch(0.99 0.003 85);
+  --brand-soft: oklch(0.955 0.025 268);     /* Blue 50  #EEF0FB */
+  --brand-strong: oklch(0.32 0.15 268);     /* Blue 700 #213590 */
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --gradient-primary: linear-gradient(135deg, oklch(0.47 0.176 268), oklch(0.32 0.15 268));
+  --gradient-soft: linear-gradient(180deg, oklch(0.955 0.025 268), oklch(0.98 0.005 85));
+  --shadow-glow: 0 20px 60px -20px oklch(0.47 0.176 268 / 0.35);
+  --shadow-card: 0 20px 50px -25px oklch(0.19 0.004 55 / 0.18);
+  --hero-foreground: oklch(0.98 0.005 85);
+  --hero-muted: oklch(0.82 0.008 80);
+  --hero-surface: oklch(0.19 0.004 55);     /* Neutral 900 — brand dark */
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+.dark {
+  --wp-mark: oklch(0.68 0.09 235);
+  --wp-line: oklch(0.38 0.03 235);
+  --wp-surface: oklch(0.22 0.015 235);
+  --wp-rail-bg: oklch(0.25 0.02 235);
+  --background: oklch(0.19 0.004 55);       /* Neutral 900 */
+  --foreground: oklch(0.98 0.005 85);       /* Neutral 50 */
+  --card: oklch(0.24 0.005 60);             /* between 800/900 */
+  --card-foreground: oklch(0.98 0.005 85);
+  --popover: oklch(0.24 0.005 60);
+  --popover-foreground: oklch(0.98 0.005 85);
+  --primary: oklch(0.62 0.16 268);          /* lighter blue for dark mode */
+  --primary-foreground: oklch(0.19 0.004 55);
+  --secondary: oklch(0.28 0.005 60);        /* Neutral 800 */
+  --secondary-foreground: oklch(0.98 0.005 85);
+  --muted: oklch(0.28 0.005 60);
+  --muted-foreground: oklch(0.75 0.008 80);
+  --accent: oklch(0.62 0.16 268);
+  --accent-foreground: oklch(0.19 0.004 55);
+  --destructive: oklch(0.68 0.19 25);
+  --destructive-foreground: oklch(0.98 0.005 85);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.62 0.16 268);
+  --brand: oklch(0.62 0.16 268);
+  --brand-foreground: oklch(0.19 0.004 55);
+  --brand-soft: oklch(0.28 0.03 268);
+  --brand-strong: oklch(0.78 0.11 268);
+  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.16 268), oklch(0.42 0.17 268));
+  --gradient-soft: linear-gradient(180deg, oklch(0.24 0.02 268), oklch(0.19 0.004 55));
+  --shadow-glow: 0 20px 60px -20px oklch(0.62 0.16 268 / 0.4);
+  --shadow-card: 0 20px 50px -25px oklch(0 0 0 / 0.6);
+  --hero-foreground: oklch(0.98 0.005 85);
+  --hero-muted: oklch(0.82 0.008 80);
+  --hero-surface: oklch(0.13 0.004 55);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "ss01", "cv11";
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility bg-gradient-primary {
+  background-color: var(--brand);
+  color: var(--brand-foreground);
+}
+@utility bg-gradient-soft {
+  background-color: var(--brand-soft);
+  color: var(--brand-strong);
+}
+@utility bg-brand {
+  background-color: var(--brand);
+  color: var(--brand-foreground);
+}
+@utility bg-brand-soft {
+  background-color: var(--brand-soft);
+  color: var(--brand-strong);
+}
+@utility text-brand {
+  color: var(--brand);
+}
+@utility border-brand {
+  border-color: var(--brand);
+}
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+@utility shadow-card-3d {
+  box-shadow: var(--shadow-card);
+}
+@utility text-gradient {
+  color: var(--brand);
+}
+@utility card-3d {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s, border-color 0.35s;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+  }
+}
+@utility reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: reveal-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Global scroll-reveal system.
+ * Elements auto-tagged by useScrollReveal start hidden and animate
+ * in when they enter the viewport. Respects reduced-motion below. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+[data-reveal="up"]     { transform: translateY(28px); }
+[data-reveal="down"]   { transform: translateY(-24px); }
+[data-reveal="left"]   { transform: translateX(28px); }
+[data-reveal="right"]  { transform: translateX(-28px); }
+[data-reveal="zoom"]   { transform: scale(0.94); }
+[data-reveal="fade"]   { transform: none; }
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes reveal-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes hero-camera {
+  0%, 100% { transform: scale(1.02) translate3d(0, 0, 0); }
+  50% { transform: scale(1.055) translate3d(-0.65%, -0.4%, 0); }
+}
+@utility animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+@utility animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+@utility animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+@utility animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+@utility animate-hero-camera {
+  animation: hero-camera 14s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+@utility font-serif {
+  font-family: var(--font-serif);
+  font-feature-settings: "kern";
+}
+@utility font-shiri {
+  font-family: var(--font-shiri);
+  font-feature-settings: "kern";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- WordPress page surface ---------- */
+@utility bg-wp-hero {
+  background:
+    radial-gradient(120% 80% at 80% -10%, color-mix(in oklab, var(--wp-mark) 22%, transparent), transparent 60%),
+    radial-gradient(90% 60% at 0% 0%, color-mix(in oklab, var(--wp-mark) 12%, transparent), transparent 65%),
+    var(--wp-surface);
+}
+
+@utility bg-wp-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--wp-line) 70%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--wp-line) 70%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(80% 70% at 50% 30%, black, transparent 85%);
+}
+
+@utility bg-wp-rail {
+  background: var(--wp-rail-bg);
+}
+
+@utility bg-wp-section {
+  background:
+    radial-gradient(70% 50% at 100% 0%, color-mix(in oklab, var(--wp-mark) 10%, transparent), transparent 70%),
+    var(--background);
+}
