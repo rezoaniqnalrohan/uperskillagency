@@ -369,7 +369,7 @@ function IndexBody() {
                 <span className="mt-2 block h-1.5 w-24 rounded-full bg-[#0F52FF]/70" />
               </h1>
               <h1 className={"text-right font-display text-4xl md:text-6xl lg:text-[84px] font-extrabold leading-[0.95] tracking-tight text-neutral-900 " + (bn ? "font-shiri" : "")}>
-                <span className="block text-2xl md:text-4xl lg:text-5xl font-semibold italic text-neutral-800">{t("ধরে রাখুন", "Keep the")}</span>
+                <span className="block text-2xl md:text-4xl lg:text-5xl font-semibold italic text-neutral-800">{t("সেলসে আনুন", "Keep the")}</span>
                 <span className="block text-[#0F52FF]">{t("গতি", "VIBE")}</span>
               </h1>
             </div>
@@ -404,22 +404,22 @@ function IndexBody() {
                 {/* LEFT copy */}
                 <div className="md:col-span-5 text-white">
                   <p className={"text-[11px] font-semibold uppercase tracking-[0.22em] text-white/85 " + (bn ? "font-shiri" : "")}>
-                    {t("নতুন লঞ্চ", "New Arrivals")}
+                    {t("New Arrivals", "New Arrivals")}
                   </p>
-                  <h2 className={"mt-3 font-display text-2xl md:text-3xl lg:text-[34px] font-bold leading-tight " + (bn ? "font-shiri" : "")}>
-                    {t("যেখানে শিল্প ও কোড", "Where Craft Meets")}<br />
-                    {t("একসাথে মেলে", "your Brand")}
+                  <h2 className={"mt-3 font-display text-2xl md:text-3xl lg:text-[32px] font-bold leading-tight " + (bn ? "font-shiri" : "")}>
+                    {t("প্রিমিয়াম ওয়েবসাইট তৈরি করে", "Where Craft Meets")}<br />
+                    {t("সেলস বাড়ান ১০গুণ", "your Brand")}
                   </h2>
-                  <p className={"mt-3 max-w-xs text-sm text-white/85 " + (bn ? "font-shiri" : "")}>
-                    {t("আজই বাংলাদেশের ভবিষ্যৎ ওয়েব ধরুন।", "Step into the future of the Bangladesh web today.")}
+                  <p className={"mt-3 max-w-sm text-sm text-white/85 " + (bn ? "font-shiri" : "")}>
+                    {t("কাস্টম ওয়েবসাইট আপনার সেলস বাড়াবে কয়েক গুণ।", "Custom websites will boost your sales manifold.")}
                   </p>
                   <a
                     href="#services"
-                    className="group mt-6 inline-flex items-center gap-2 rounded-full bg-white pl-5 pr-2 py-2 text-sm font-semibold text-[#0F52FF] shadow-[0_15px_30px_-10px_rgba(0,0,0,0.25)] transition-all hover:-translate-y-0.5"
+                    className="group mt-6 inline-flex items-center justify-between gap-4 rounded-full bg-[#EF4444] hover:bg-[#DC2626] px-8 py-3.5 text-base md:text-lg font-bold text-white shadow-[0_15px_30px_-10px_rgba(239,68,68,0.5)] transition-all hover:-translate-y-0.5 w-full sm:w-auto"
                   >
-                    <span className={bn ? "font-shiri" : ""}>{t("এখনই শুরু", "New Drops")}</span>
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0F52FF] text-white transition-transform group-hover:translate-x-0.5">
-                      <ArrowRight className="h-4 w-4" />
+                    <span className={bn ? "font-shiri" : ""}>{t("এখনই শুরু", "Get Started")}</span>
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#EF4444] transition-transform group-hover:translate-x-1">
+                      <ArrowRight className="h-5 w-5" />
                     </span>
                   </a>
 
@@ -427,7 +427,7 @@ function IndexBody() {
                   <ul className="mt-6 grid gap-2">
                     {[
                       { icon: Check, label: t("বিকাশ, নগদ ও COD সাপোর্ট", "bKash, Nagad & COD ready") },
-                      { icon: Zap, label: t("৩জি অ্যান্ড্রয়েডেও দ্রুত লোড", "Blazing fast on 3G Android") },
+                      { icon: Zap, label: t("3G Android support", "3G Android support") },
                       { icon: LifeBuoy, label: t("২৪/৭ হোয়াটসঅ্যাপ সাপোর্ট", "24/7 WhatsApp support") },
                       { icon: Sparkles, label: t("বাংলা-ইংরেজি দ্বিভাষিক ডিজাইন", "Bilingual Bangla-English design") },
                     ].map((f, i) => (

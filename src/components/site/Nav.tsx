@@ -53,7 +53,7 @@ export function Nav() {
                 }}
                 className="rounded-full px-3.5 py-1.5 text-[13px] font-medium tracking-tight transition-all"
               >
-                <span className={t("font-shiri", "")}>{t(l.bn, l.label)}</span>
+                <span>{l.label}</span>
               </Link>
             ))}
           </nav>
