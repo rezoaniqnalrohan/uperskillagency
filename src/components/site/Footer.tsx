@@ -2,11 +2,7 @@ import { useLang } from "@/hooks/use-language";
 
 function BrandMarkFooter() {
   return (
-    <svg viewBox="0 0 40 40" aria-hidden="true" className="h-9 w-9">
-      <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" strokeWidth="2.5" />
-      <path d="M13 14v9a7 7 0 0 0 14 0v-9" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M20 22V10m0 0l-3.5 3.5M20 10l3.5 3.5" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+    <img src="/assets/uperskill-mark.png" alt="Uperskill Agency Logo" className="h-9 w-9 rounded-full object-contain bg-white" />
   );
 }
 

@@ -25,8 +25,8 @@ export function Nav() {
             className="group flex items-center gap-2.5 pl-1 pr-3 text-foreground"
             aria-label="Uperskill Agency"
           >
-            <span className="relative grid h-10 w-10 place-items-center rounded-full ring-1 ring-border/70">
-              <img src={logoMark.url} alt="" className="h-9 w-9 rounded-full" />
+            <span className="relative grid h-10 w-10 place-items-center rounded-full ring-1 ring-border/70 overflow-hidden bg-white">
+              <img src={logoMark.url} alt="Uperskill Agency Logo" className="h-9.5 w-9.5 rounded-full object-contain" />
               <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-brand ring-2 ring-background" />
             </span>
             <span className="hidden sm:flex items-baseline gap-1 text-[15px] font-display font-semibold tracking-tight leading-none">
