@@ -378,7 +378,7 @@ function IndexBody() {
             <div className="md:hidden mt-6 flex justify-center">
               <img
                 src={heroPerson}
-                alt="Adarsh — Founder of Uperskill Agency"
+                alt="Uperskill Agency Founders"
                 width={928}
                 height={1152}
                 fetchPriority="high"
@@ -524,7 +524,7 @@ function IndexBody() {
             {/* Person — desktop only, overlaps the blue card */}
             <img
               src={heroPerson}
-              alt="Adarsh — Founder of Uperskill Agency"
+              alt="Uperskill Agency Founders"
               width={928}
               height={1152}
               fetchPriority="high"
