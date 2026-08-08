@@ -81,14 +81,14 @@ export function WordPressPromo() {
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-wp-mark" />
               <span className={f}>{t("ওয়ার্ডপ্রেস স্পেশাল", "WordPress Special")}</span>
             </span>
-            <h2 className={"mt-5 text-4xl font-medium tracking-tight md:text-5xl " + (bn ? "font-shiri" : "font-display")}>
+            <h2 className={"mt-5 text-4xl font-medium tracking-tight md:text-5xl text-white " + (bn ? "font-shiri" : "font-display")}>
               {bn ? (
                 <>
-                  ৬০ সেকেন্ডে <em className="not-italic text-gradient">ওয়েবসাইট বানান।</em>
+                  ৬০ সেকেন্ডে ওয়েবসাইট বানান।
                 </>
               ) : (
                 <>
-                  Build a website <em className="not-italic text-gradient">in 60 seconds.</em>
+                  Build a website in 60 seconds.
                 </>
               )}
             </h2>
@@ -120,18 +120,18 @@ export function WordPressPromo() {
               </ul>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 to="/wordpress"
-                className="group inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-semibold text-background transition-transform duration-300 hover:scale-105"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[#EF4444] hover:bg-[#DC2626] px-8 py-3.5 text-base md:text-lg font-bold text-white shadow-[0_15px_30px_-10px_rgba(239,68,68,0.5)] transition-all duration-300 hover:scale-105"
               >
                 <span className={f}>{t("ওয়ার্ডপ্রেস প্যাকেজ দেখুন", "Explore WordPress packages")}</span>
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+                <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45" />
               </Link>
               <Link
                 to="/wordpress"
                 hash="demos"
-                className="inline-flex items-center gap-2 rounded-full border border-wp-line bg-card/70 px-7 py-3.5 text-sm font-semibold backdrop-blur transition-colors hover:bg-secondary"
+                className="inline-flex items-center gap-2.5 rounded-full bg-white hover:bg-neutral-100 text-neutral-900 px-8 py-3.5 text-base md:text-lg font-bold shadow-lg transition-transform duration-300 hover:scale-105"
               >
                 <span className={f}>{t("লাইভ ডেমো", "Live demos")}</span>
               </Link>

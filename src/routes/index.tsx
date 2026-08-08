@@ -239,7 +239,7 @@ const stats = [
   { value: "200+", label: "Businesses launched", labelBn: "চালু হওয়া ব্যবসা" },
   { value: "4.9/5", label: "Average client rating", labelBn: "গড় ক্লায়েন্ট রেটিং" },
   { value: "48h", label: "Avg. first draft", labelBn: "প্রথম ড্রাফট সময়" },
-  { value: "99.9%", label: "Uptime, monitored", labelBn: "মনিটরড আপটাইম" },
+  { value: "100%", label: "On time delivery", labelBn: "অন টাইম ডেলিভারি" },
 ];
 
 const process = [
@@ -443,7 +443,7 @@ function IndexBody() {
                   {/* Mini stats */}
                   <div className="mt-5 grid grid-cols-3 gap-2 max-w-sm">
                     {[
-                      { v: "200+", l: t("ব্যবসা", "Businesses") },
+                      { v: "114+", l: t("প্রজেক্ট", "Projects") },
                       { v: "4.9★", l: t("রেটিং", "Rating") },
                       { v: "48h", l: t("ডেলিভারি", "First draft") },
                     ].map((s, i) => (
@@ -496,8 +496,8 @@ function IndexBody() {
                     </p>
                     <div className="mt-2 overflow-hidden rounded-2xl">
                       <img
-                        src={productStock}
-                        alt="Stock management system dashboard"
+                        src={workEcom.url}
+                        alt="E-Commerce & Agency Store Dashboard"
                         width={1920}
                         height={1080}
                         loading="lazy"
@@ -505,16 +505,16 @@ function IndexBody() {
                       />
                     </div>
                     <div className={"mt-3 text-sm font-bold text-neutral-900 " + (bn ? "font-shiri" : "")}>
-                      {t("স্টক ম্যানেজমেন্ট সিস্টেম", "Stock Management System")}
+                      {t("ই-কমার্স ও এজেন্সি সাইট", "E-Commerce & Agency Store")}
                     </div>
                     <div className={"text-[11px] text-neutral-500 " + (bn ? "font-shiri" : "")}>
-                      {t("রিয়েলটাইম ইনভেন্টরি ও রিপোর্ট।", "Realtime inventory & reports.")}
+                      {t("উকমার্স, বিকাশ, নগদ ও পেমেন্ট গেটওয়ে সহ।", "WooCommerce, bKash & payment checkout ready.")}
                     </div>
                     <div className="mt-3 flex items-center justify-between">
                       <button className="grid h-9 w-9 place-items-center rounded-full bg-[#0F52FF] text-white shadow hover:-translate-y-0.5 transition-transform">
                         <ShoppingBag className="h-4 w-4" />
                       </button>
-                      <span className="text-base font-extrabold text-neutral-900">৳3,999</span>
+                      <span className="text-base font-extrabold text-neutral-900">৳4,999</span>
                     </div>
                   </div>
                 </div>
