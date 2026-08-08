@@ -473,24 +473,9 @@ function IndexBody() {
                 {/* Spacer for the person to occupy */}
                 <div className="hidden md:block md:col-span-3" />
 
-                {/* RIGHT — features + product */}
+                {/* RIGHT — product */}
                 <div className="md:col-span-4 text-white">
-                  <div className="grid grid-cols-3 gap-2">
-                    {[
-                      { icon: Check, label: t("প্রিমিয়াম মান", "Premium Quality") },
-                      { icon: Star, label: t("ইউনিক ডিজাইন", "Unique Designs") },
-                      { icon: Zap, label: t("দ্রুত ডেলিভারি", "Fast Delivery") },
-                    ].map((f, i) => (
-                      <div key={i} className="rounded-2xl bg-white/10 backdrop-blur p-3 text-center ring-1 ring-white/15">
-                        <div className="mx-auto grid h-8 w-8 place-items-center rounded-full bg-white/90 text-[#0F52FF]">
-                          <f.icon className="h-4 w-4" />
-                        </div>
-                        <div className={"mt-2 text-[10px] font-semibold leading-tight text-white " + (bn ? "font-shiri" : "")}>{f.label}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-5 rounded-3xl bg-white p-4 ring-1 ring-black/5 shadow-[0_25px_50px_-20px_rgba(0,0,0,0.35)]">
+                  <div className="rounded-3xl bg-white p-4 ring-1 ring-black/5 shadow-[0_25px_50px_-20px_rgba(0,0,0,0.35)]">
                     <p className="text-[10px] font-semibold uppercase tracking-widest text-neutral-400">
                       {t("ফিচার্ড প্রোডাক্ট", "Featured Product")}
                     </p>
