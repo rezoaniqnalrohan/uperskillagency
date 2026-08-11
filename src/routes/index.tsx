@@ -52,6 +52,11 @@ import workPos from "@/assets/work-pos-system.png.asset.json";
 import workStockDash from "@/assets/work-stock-dashboard.png.asset.json";
 
 const recentProjects: { name: { bn: string; en: string }; url?: string; image: string }[] = [
+  { name: { bn: "নেক্সোরা ই-কমার্স স্টোর", en: "Nexora E-Commerce Store" }, image: "/assets/work-nexora.jpg" },
+  { name: { bn: "মেডস্টক ইনভেন্টরি সিস্টেম", en: "MedStock Inventory System" }, image: "/assets/work-medstock.png" },
+  { name: { bn: "ফ্রেশস্টক কোল্ড-চেইন সিস্টেম", en: "FreshStock Cold-Chain" }, image: "/assets/work-freshstock.jpg" },
+  { name: { bn: "ইলেক্ট্রোস্টক পিওএস সিস্টেম", en: "ElectroStock POS System" }, image: "/assets/work-electrostock.png" },
+  { name: { bn: "ফুডস্টক ম্যানেজমেন্ট সিস্টেম", en: "FoodStock Management System" }, image: "/assets/work-foodstock.jpg" },
   { name: { bn: "এজেন্সি ওয়েবসাইট", en: "Agency Website" }, url: "https://agency-uperskill.lovable.app", image: workAgency.url },
   { name: { bn: "ই-কমার্স স্টোর", en: "E-commerce" }, url: "https://uperskillecommerce.lovable.app", image: workEcom.url },
   { name: { bn: "কাস্টম সিজিপিএ ক্যালকুলেটর", en: "Custom CGPA Calculator" }, url: "https://cgpacalculator-uperskill.lovable.app/", image: workCgpa.url },
