@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CreditCard, ShieldCheck, Smartphone, PenTool, Code2, Rocket, LifeBuoy } from "lucide-react";
 import { ServiceLanding } from "@/components/site/ServiceLanding";
-import heroEcommerce from "@/assets/hero-ecommerce.webp";
 import sectionEcommerce from "@/assets/section-ecommerce.webp";
 import productPlugin from "@/assets/product-plugin.webp";
 import productTheme from "@/assets/product-theme.webp";
@@ -49,8 +48,8 @@ export const Route = createFileRoute("/ecommerce")({
         </>
       }
       subtitle="Mobile-first stores tuned for Bangladesh — bKash, Nagad and COD out of the box, with the design polish of a global brand."
-      heroImage={heroEcommerce}
-      heroImageAlt="Animated e-commerce storefront dashboard preview"
+      heroImage="/assets/work-nexora.jpg"
+      heroImageAlt="Nexora E-Commerce storefront dashboard"
       stats={[
         { value: "120+", label: "Stores Launched" },
         { value: "৳4.2Cr", label: "GMV Processed" },
